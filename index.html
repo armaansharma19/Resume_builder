@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <nav>
+       <h1>Resume Builder</h1> 
+    </nav>
+    <div class="main"> 
+        <div class="edit">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="names">
+                    First Name
+                     <input type="text" class="fname" id="nameInput">
+                     Last Name
+                     <input type="text" class="fname" id="lnameInput">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Details</legend>
+                <div class="details">
+                    Job Title 
+                    <input type="text" class="job-title" id="jobTitleInput">
+                    Phone Number 
+                    <input type="tel" id="phone" class="phone-number" pattern="[0-9]* ">
+               <br>     Email Address 
+                    <input type="email" id="email" class="email-address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                </div>
+            </fieldset>
+            
+            
+            <fieldset>
+                <legend>Address Information</legend>
+                <div class="address" >
+                    Address 
+                    <input type="text" class="address" id="add"> 
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="output">
+        <!-- <div class="name"> <h2 id="name">Your Name Here</h2></div>
+        <div class="job-title"> <h2 id="job-title">Your Job Title Here</h2></div>
+        <div class="phone-number"> <h2 id="phone-number">Your Phone Number Here</h2></div>
+        <div class="email-address"> <h2 id="email-address">Your Email Address Here</h2></div>
+        <div class="address"> <h2 id="address">Your Address Here</h2></div>
+    -->
+    <iframe src="a.html" id="resumeFrame" width="800" height="750" frameborder="0"></iframe>
+
+   
+    </div>
+    <script src="./1.js"></script>
 </body>
 </html>

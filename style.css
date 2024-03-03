@@ -1,0 +1,66 @@
+
+body{
+    background-color: #0dd397;
+}
+/* .main {
+    background: #0dd397;;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* For text color contrast */
+} */
+
+/* .edit {
+    color: rgb(0, 0, 0);
+    height: 50vh;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    width: 45%;
+    display: flex; /* Add this line */
+    /* flex-direction: column; /* Add this line */
+/* } */ */ */
+
+.names {
+    display: inline;
+}
+
+.details {
+    padding: 5px;
+}
+
+.names input,
+.details input,
+.address input {
+    margin-bottom: 10px;
+}
+
+.main {
+    /* background: #0dd397; */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* For text color contrast */
+    display: flex;
+}
+
+.edit {
+    color: rgb(0, 0, 0);
+    height: 50vh;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.output {
+    position: absolute;
+    top: 50px;
+    right: 128px; /* Adjusted position to the right */
+    margin: 20px;
+    width: 45%; /* Adjusted width */
+    height:200px; /* Adjusted height */
+}
+
