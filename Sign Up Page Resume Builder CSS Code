@@ -10,11 +10,6 @@ body {
   .slogan-container{
     width: 400px;
   }
-  .form-group a{
-    width: 100%;
-    text-align: end;
-    margin-bottom: 15px;
-  }
   .slogan-container h1{
     font-size: 46px;
     font-weight: 600;
