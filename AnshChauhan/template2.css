@@ -1,6 +1,6 @@
 
 body{
-    background-image: linear-gradient(to right, #ff7e5f, #feb47b, #ffcc91);
+    background-color: #0dd397;
 }
 /* .main {
     background: #0dd397;;
@@ -20,7 +20,6 @@ body{
     display: flex; /* Add this line */
     /* flex-direction: column; /* Add this line */
 /* } */ */ */
-
 
 .names {
     display: inline;
@@ -64,4 +63,9 @@ body{
     width: 45%; /* Adjusted width */
     height:200px; /* Adjusted height */
 }
+
+
+fieldset{
+    margin-bottom: 6vh;
+  }
 
