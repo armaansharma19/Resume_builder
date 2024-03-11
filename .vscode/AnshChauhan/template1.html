@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="template1.css">
+    <link rel="stylesheet" href="resume1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+<!-- hellllooo -->
+
 </head>
 <body>
     <nav>
@@ -24,7 +28,7 @@
             <fieldset>
                 <legend>Contact Details</legend>
                 <div class="details">
-                    Job Title 
+                    Profession
                     <input type="text" class="job-title" id="jobTitleInput">
                     Phone Number 
                     <input type="tel" id="phone" class="phone-number" pattern="[0-9]* ">
@@ -41,14 +45,58 @@
                     <input type="text" class="address" id="add"> 
                 </div>
             </fieldset>
-            <!-- <fieldset>
+            <fieldset>
                 <legend>Upload Profile Image</legend>
                 <input type="file" id="imageInput" accept="image/*">
                 <button id="uploadButton">Upload</button>
-            </fieldset> -->
+            </fieldset>
+           <!-- Jobs -->
+           <fieldset>
+            <legend>Experience</legend>
+            <div class="details">
+                Company
+                <input type="text" class="job-title" id="oj">
+                Job Title
+                <input type="tel" id="job" class="phone-number" >
+           <br>     About
+                <input type="text" id="about" class="email-address" >
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            <div class="details">
+                University
+                <input type="text" class="edu-title" id="uniInput">
+                Degree
+                <input type="text" class="edu-degree" id="degreeInput">
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Key Skills</legend>
+            <div class="skills">
+                <textarea id="skillsInput"></textarea>
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Certification</legend>
+            <div class="certification">
+                <textarea id="certificationInput"></textarea>
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Awards</legend>
+            <div class="awards">
+                <textarea id="awardsInput"></textarea>
+            </div>
+        </fieldset>
+        <button id="downloadButton">Download PDF</button>
+
         </div>
     </div>
-    
+
     <div class="output">
         <!-- <div class="name"> <h2 id="name">Your Name Here</h2></div>
         <div class="job-title"> <h2 id="job-title">Your Job Title Here</h2></div>
@@ -56,12 +104,52 @@
         <div class="email-address"> <h2 id="email-address">Your Email Address Here</h2></div>
         <div class="address"> <h2 id="address">Your Address Here</h2></div>
     -->
-    <iframe src="template1a.html" id="resumeFrame" width="800" height="750" frameborder="0"></iframe>
-
-    
+    <iframe src="template1a.html" id="resumeFrame" width="800" height="1200" frameborder="0"></iframe>
 
    
     </div>
     <script src="./1.js"></script>
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Fetch the content of a.html
+            fetch('a.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Create a temporary element to hold the content of a.html
+                    const tempElement = document.createElement('div');
+                    tempElement.innerHTML = html;
+
+                    // Define PDF generation options
+                    const opt = {
+                        margin: 1,
+                        filename: 'resume.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    };
+
+                    // Generate PDF from the content of a.html and initiate download
+                    html2pdf().from(tempElement).set(opt).save();
+                });
+        });
+    </script>
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Select the content of the resume frame
+            const resumeFrameContent = document.getElementById("resumeFrame").contentDocument.body;
+    
+            // Define PDF generation options
+            const opt = {
+                margin: 1,
+                filename: 'resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+    
+            // Generate PDF from the content of resumeFrame and initiate download
+            html2pdf().from(resumeFrameContent).set(opt).save();
+        });
+    </script>
 </body>
 </html>
