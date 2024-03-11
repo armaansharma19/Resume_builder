@@ -70,11 +70,15 @@ body {
   padding: 0.8rem;
   background-color: white;
   color: #f27222;
+  cursor: pointer;
+    transition: background-color 0.3s, color 0.1s;
 }
 
 .nav-2 a {
-  color: #f27222;
+  color:#f27222 ;
   text-decoration: none;
+  cursor: pointer;
+    transition:color 0s;
 }
 
 /* .second{
@@ -928,3 +932,52 @@ padding-right: 9%;
 
   }
 
+  /* .nav-2 button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  } */
+  
+  .nav-2 button:hover {
+    /* background-color: #F27222; */
+    background-color: rgb(249, 140, 16);
+    color:white
+    
+  }
+
+  .nav-2 button a:hover {
+    /* background-color: #F27222; */
+    color: white;
+  }
+
+  .animation{
+    margin-right: 3vw;
+  }
+  
+  .animation i{
+    font-size: 2.5vw;
+    
+    padding: 1.7vw;
+    position: relative;
+    animation: element 2s linear infinite;
+  }
+
+  @keyframes element {
+    0%, 100% {
+      left: -50px;
+    }
+    50% {
+      left: 200px;
+    }
+  }
+  
+  
+  
+  .element {
+    position: relative;
+    animation: animation 2s linear infinite;
+  }
+  
