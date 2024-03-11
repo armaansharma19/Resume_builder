@@ -2,6 +2,9 @@
 body{
     /* background-image: linear-gradient(to right, #ff7e5f, #feb47b, #ffcc91); */
     background-color: white;
+    background-image: url(./comp3.jpg);
+    background-size: cover;
+    
 }
 /* .main {
     background: #0dd397;;
@@ -70,5 +73,11 @@ body{
 fieldset{
     margin-bottom: 6vh;
   }
+
+  h1{
+    color: white;
+  }
   
-  
+/* legend{
+    color: white;
+} */

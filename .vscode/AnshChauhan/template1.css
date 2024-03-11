@@ -8,15 +8,15 @@
 }
 :root {
 	--primary-color: #ff7613;
-	--text-color: white;
+	--text-color: black;
 }
 html {
 	font-size: 10px;
 }
 body {
 	font-family: Inter, sans-serif;
-	background-color: purple;
-	color: white;
+	background-color: white;
+	color: black;
 }
 
 /* common styles */
@@ -63,7 +63,7 @@ a {
 	margin: 0 auto;
 	display: grid;
 	padding: 5rem;
-	background: purple;
+	background: white;
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
 }
@@ -115,12 +115,20 @@ a {
 	max-width: 250px;
 }
 .profile_name_firstName {
-	color: white;
+	/* color: black;
 	font-weight: 200;
 	font-size: clamp(2rem, 8vw, 4rem);
 	text-transform: uppercase;
 	display: block;
-	margin-bottom: -0.8rem;
+	margin-bottom: -0.8rem; */
+    
+
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+
 }
 .profile_name_lastName {
 	color: var(--primary-color);
@@ -275,4 +283,3 @@ hr {
 img{
     width: 30vw;
 }
-
